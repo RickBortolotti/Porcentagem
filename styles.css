@@ -1,73 +1,120 @@
-/* styles.css */
+/* Importando a fonte do Google Fonts */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
 body {
-    font-family: Arial, sans-serif;
+    font-family: 'Roboto', sans-serif; /* Usando Roboto */
+    background: linear-gradient(135deg, #ffffff, #1f1b1b); /* Degradê suave de azul claro para cinza */
+    color: #333;
     margin: 0;
     padding: 0;
-    background-color: #939799;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    height: 100vh;
-}
+    min-height: 100vh; /* Garante que cubra 100% da altura da viewport */
 
-header {
-    width: 100%;
-    background-color: #f4f4f4;
-    padding: 4px 0;
-    text-align: center;
-    position: fixed;
-    top: 0;
-    left: 0;
-    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
-}
-
-header a {
-    display: inline-block; 
-}
-
-.logo {
-    max-width: 125px; 
-    height: auto;
 }
 
 .container {
-    background: #fff;
-    padding: 20px;
-    border-radius: 8px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    width: 300px;
+    max-width: 600px;
+    margin: 50px auto;
+    padding: 30px; /* Aumentando o padding para um visual mais arejado */
+    background: #ffffff; /* Fundo branco */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+h1 {
     text-align: center;
-    margin-top: 80px; 
+    color: #eb1b23; /* Vermelho atualizado */
+    margin-bottom: 20px; /* Aumentando o espaço abaixo */
 }
 
-label {
-    display: block;
-    margin-top: 10px;
+h2, h3 {
+    margin-top: 20px;
+    color: #555; /* Cinza escuro */
 }
 
-input {
-    width: 100%;
-    padding: 8px;
-    margin-top: 5px;
-    box-sizing: border-box;
+input[type="number"] {
+    width: calc(100% - 22px);
+    padding: 12px; /* Aumentando o padding para conforto */
+    margin: 10px 0;
+    border: 1px solid #eb1b23; /* Borda vermelha atualizada */
+    border-radius: 5px; /* Bordas arredondadas */
+    font-size: 16px;
+    transition: border-color 0.3s; /* Transição suave ao focar */
+}
+
+input[type="number"]:focus {
+    border-color: #c71519; /* Vermelho escuro ao focar */
+    outline: none; /* Remove o contorno padrão */
 }
 
 button {
-    margin-top: 20px;
-    padding: 10px 15px;
-    background-color: #e21d1c;
-    color: #fff;
+    padding: 12px 20px; /* Botão um pouco maior */
+    background-color: #eb1b23; /* Fundo vermelho atualizado */
+    color: white;
     border: none;
-    border-radius: 5px;
+    border-radius: 5px; /* Bordas arredondadas */
     cursor: pointer;
+    font-size: 16px;
+    margin: 10px 0;
+    transition: background-color 0.3s, transform 0.2s; /* Efeito de transformação */
 }
 
 button:hover {
-    background-color: #c81010;
+    background-color: #c71519; /* Vermelho escuro ao passar o mouse */
+    transform: scale(1.05); /* Aumenta um pouco o botão */
 }
 
-#result {
-    margin-top: 20px;
+.titulo-porcentagem {
+    display: block;
+    margin-top: 15px;
+}
+
+ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px; /* Aumentando o padding para conforto */
+    background: #f9f9f9; /* Fundo suave para as linhas da lista */
+    border-bottom: 1px solid #eee; /* Linha de separação */
+}
+
+li:last-child {
+    border-bottom: none;
+}
+
+.preco-com-porcentagem {
+    margin-left: 10px;
+    color: #27ae60; /* Verde para o preço com porcentagem */
+}
+
+button.remover {
+    background-color: #e74c3c; /* Cor do botão remover */
+}
+
+button.remover:hover {
+    background-color: #c0392b; /* Cor do botão remover ao passar o mouse */
+}
+
+h3.total {
+    position: relative; /* Use "relative" para evitar sobreposição */
+    margin-top: 20px; /* Espaço acima do resultado */
+    text-align: right; /* Alinhando o texto à direita */
+    font-size: 20px;
+    color: #eb1b23; /* Cor do texto total atualizada */
+    padding: 15px; /* Adicionando espaço interno */
+    background: rgba(255, 255, 255, 0.9); /* Fundo semi-transparente */
+    border-radius: 10px; /* Bordas arredondadas */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1); /* Sombra leve */
+}
+
+.logo {
+    display: block;
+    margin: 10px auto; /* Ajustando margens */
+    max-width: 150px; /* Reduzindo o tamanho da logo */
+    height: auto; /* Mantendo a proporção */
+    margin-bottom: 20px; /* Espaço abaixo da logo */
 }
