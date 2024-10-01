@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Calculadora de Orçamento</title>
+    <link rel="shortcut icon" href="LogoShortcut.png" type="image/png">
+</head>
+<body>
+    <div class="container">
+        <img class="logo" src="LogoDigital.png">
+        <h1>Calculadora de Orçamento</h1>
+        <div>
+            <input type="number" id="produto" placeholder="Valor do Produto" />
+            <button id="addProduto">Adicionar Produto</button>
+        </div>
+        <div>
+            <label for="porcentagem" class="titulo-porcentagem">Porcentagem (%)</label>
+            <input type="number" id="porcentagem" placeholder="Porcentagem" />
+        </div>
+        <button id="calcular">Calcular Total</button>
+        <h2>Produtos:</h2>
+        <ul id="listaProdutos"></ul>
+        <h3 class="total">
+            <span id="quantidade">0</span> produtos + 
+            <span id="porcentagemDisplay">0%</span> = 
+            R$ <span id="total">0.00</span>
+        </h3>
+    </div>
+   
+    
+    <script src="script.js"></script>
+</body>
+</html>
